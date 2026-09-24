@@ -1,0 +1,17 @@
+{
+  "name": "docsautomator",
+  "owner": {
+    "name": "DocsAutomator",
+    "email": "support@docsautomator.co"
+  },
+  "metadata": {
+    "description": "DocsAutomator for AI agents: documents in your brand, sent for acceptance or signature."
+  },
+  "plugins": [
+    {
+      "name": "docsautomator",
+      "source": "./",
+      "description": "Make documents in your brand from your AI agent and send them for acceptance or signature with DocsAutomator."
+    }
+  ]
+}
