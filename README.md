@@ -102,6 +102,8 @@ The server gives your agent about 50 tools. In plain words:
 - **Acceptance and signature:** set up recipients and settings, send, remind, resend, cancel, get signing links, and read the session and its audit trail.
 - **Help:** search the DocsAutomator documentation and send a test email.
 
+Every tool tells your app whether it only reads, changes data, or replaces, deletes or sends something, so your app can ask you before it acts.
+
 ## Pricing
 
 Pricing is at https://docsautomator.co/pricing. Acceptance and signature cost $0.50 per document, charged once when the first recipient opens it. A request nobody opens is free.

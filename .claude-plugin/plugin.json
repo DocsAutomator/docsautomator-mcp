@@ -1,7 +1,7 @@
 {
   "name": "docsautomator",
   "description": "Make documents in your brand from your AI agent and send them for acceptance or signature with DocsAutomator.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "DocsAutomator", "email": "support@docsautomator.co" },
   "homepage": "https://docsautomator.co/features/ai-and-agents/"
 }

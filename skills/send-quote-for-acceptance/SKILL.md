@@ -24,7 +24,7 @@ This is the first win with DocsAutomator. You make a quote in the user's brand a
 4. If there is no website, or step 3 fails: call `search_template_gallery` with "quote", then `use_gallery_template` with a result that has a Word version.
 5. Call `configure_esignature` with `closeType: "acceptance"`, `deliveryMethod: "email"` and one signer `{ role: "Client", emailSource: "request" }`.
 6. Call `list_placeholders`. Fill every placeholder with realistic sample data for the user's business.
-7. Call `create_document` with `isPreview: true` (test mode) and `recipients: [{ signer: 1, email: <user's email>, name: <user's name> }]`.
+7. Call `create_document` with `mode: "test"` and `recipients: [{ signer: 1, email: <user's email>, name: <user's name> }]`.
 8. Tell the user: "Check your inbox on your phone, open the email from DocsAutomator, type your name and tap Accept."
 
 Test mode is free. It sends the real email and is never billed. The document carries a preview watermark.
@@ -36,7 +36,7 @@ The first win is done when `get_esign_session` returns `status: "completed"`. Th
 ## Next steps
 
 Offer one of these:
-- "Send it to a real client": call `create_document` again without `isPreview`, with the client's email in `recipients`. A real acceptance costs $0.50 per document, charged when the recipient first opens it.
+- "Send it to a real client": call `create_document` again with `mode: "live"`, with the client's email in `recipients`. A real acceptance costs $0.50 per document, charged when the recipient first opens it.
 - "Now from my Airtable": connect Airtable in the DocsAutomator app under Settings > Integrations, then call `set_data_source` and `set_field_mappings`.
 - "Use my own Word template": call `upload_word_template` with the user's .docx file.
 
