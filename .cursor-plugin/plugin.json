@@ -1,0 +1,18 @@
+{
+  "name": "docsautomator",
+  "displayName": "DocsAutomator",
+  "version": "1.0.0",
+  "description": "Make documents in your brand from your data, and send them for acceptance or signature.",
+  "author": {
+    "name": "DocsAutomator",
+    "email": "support@docsautomator.co"
+  },
+  "homepage": "https://docsautomator.co/docs/integrations-api/docsautomator-mcp",
+  "repository": "https://github.com/DocsAutomator/docsautomator-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": ["docsautomator", "documents", "pdf", "word", "e-signature", "acceptance", "quotes", "invoices", "mcp"],
+  "category": "integrations",
+  "tags": ["docsautomator", "documents", "e-signature", "mcp"],
+  "mcpServers": "./mcp.json"
+}

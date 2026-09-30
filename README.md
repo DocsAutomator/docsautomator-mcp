@@ -4,19 +4,19 @@ DocsAutomator makes documents from your data and sends them for acceptance or si
 
 **Server address:** `https://mcp.docsautomator.co/mcp`
 
-The server is hosted by DocsAutomator. You install nothing. This repository holds no server code, only the connection details, a Claude plugin and a skill.
+The server is hosted by DocsAutomator. You install nothing. This repository holds no server code, only the connection details, a Claude plugin, a Cursor plugin and a skill.
 
 ## What your agent can do
 
 - Design a document template in your brand, for example from your website.
 - Fill the template with your data and make a PDF or Word document.
-- Send the document for acceptance (the recipient reads it and taps Accept) or for signature.
+- Send the document for acceptance (the recipient reads it and clicks Accept) or for signature.
 - Follow each document: who opened it, who accepted or signed, and the final PDF.
 - Build complete automations that run from Airtable, Notion, Google Sheets, ClickUp, SmartSuite, Google Forms, Zapier, Make or n8n.
 
 ## Connect your AI app
 
-You sign in to DocsAutomator the first time your app connects. If you have no account, you can create one for free at https://app.docsautomator.co.
+You sign in to DocsAutomator the first time your app connects. You need a DocsAutomator account: https://app.docsautomator.co.
 
 **Claude (web, desktop and mobile)**
 1. Open Settings, then Connectors.
@@ -31,17 +31,23 @@ You sign in to DocsAutomator the first time your app connects. If you have no ac
 
 **Cursor**
 
-[Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=DocsAutomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
+[![Add DocsAutomator MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=DocsAutomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
 
-Or add this to your MCP settings:
+1. Click the button. Cursor opens and shows the DocsAutomator server.
+2. Click Install, then Connect.
+3. Sign in to DocsAutomator and click Authorize.
+
+Or add this to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for all projects:
 
 ```json
 {
   "mcpServers": {
-    "docsautomator": { "url": "https://mcp.docsautomator.co/mcp" }
+    "docsautomator": { "type": "http", "url": "https://mcp.docsautomator.co/mcp" }
   }
 }
 ```
+
+This repository is also a Cursor plugin: the manifest is `.cursor-plugin/plugin.json` and the server configuration is `mcp.json`.
 
 **VS Code**
 
