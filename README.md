@@ -99,14 +99,15 @@ Your agent can send any document in test mode. A test document carries a preview
 
 ## Tools
 
-The server gives your agent about 50 tools. In plain words:
+The server gives your agent 18 tools. The main path: your agent is the data source and sends the values for each document. In plain words:
 
-- **Automations:** list, read, create, copy and delete automations; set the name, language, status and output (PDF, Word, Google Doc, Google Drive, email).
-- **Templates:** design a Word or Google Doc template with AI, edit it, undo an edit, preview style options, use a template from the gallery, read your brand from a website, upload your own Word or PDF template, and list its placeholders.
-- **Data:** connect a data source, read its structure and sample records, map fields, and set up line items, conditions and placeholder formats.
-- **Documents:** make a document, follow its job, and list recent runs.
-- **Acceptance and signature:** set up recipients and settings, send, remind, resend, cancel, get signing links, and read the session and its audit trail.
-- **Help:** search the DocsAutomator documentation and send a test email.
+- **Automations:** list, read, create, copy and trash automations; set the name, language, status, trigger and output (PDF, Word, Google Doc, Google Drive, email).
+- **Templates:** design a Word template with AI in your brand, edit it and undo an edit, or use a gallery template, your own Word or PDF file, or a Google Doc you already have.
+- **Placeholders:** what each placeholder means and how it prints, line items, and show and hide rules.
+- **Documents:** make a document with the values your agent sends, follow its job, and list recent runs.
+- **Record sources (optional):** read the tables and fields of a connected Airtable, Notion, Google Sheets, SmartSuite or ClickUp account, and connect one with its field mappings. You connect the account once in the DocsAutomator app.
+- **Acceptance and signature:** set up recipients and settings, list requests with their status, signing links and audit trail, and remind, resend or cancel.
+- **Help:** search the DocsAutomator documentation and the template gallery.
 
 Every tool tells your app whether it only reads, changes data, or replaces, deletes or sends something, so your app can ask you before it acts.
 

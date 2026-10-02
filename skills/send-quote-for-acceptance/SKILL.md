@@ -15,15 +15,14 @@ This is the first win with DocsAutomator. You make a quote in the user's brand a
 ## Steps
 
 1. Call `create_automation` with `title: "Quotes"` and `dataSourceName: "API"`.
-2. If the user gave a website, call `extract_brand_from_url` with it.
-3. Call `generate_word_template` on the new automation:
+2. Call `generate_word_template` on the new automation:
    - `title: "Quote"`, `signingMode: "none"` (acceptance needs no signature block).
-   - `customColors` from the brand colors. Pass `logoUrl` only when `logoIsEmbeddable` is true.
+   - `brandWebsite` set to the user's website, when they gave one. It reads their brand colors and logo.
    - A prompt for a one-page quote: logo, quote number, date, valid-until date, sender and client details, a line items table (description, quantity, unit price, amount), subtotal, tax, total, and terms.
-   - `placeholderDescriptions` for every placeholder.
-4. If there is no website, or step 3 fails: call `search_template_gallery` with "quote", then `use_gallery_template` with a result that has a Word version.
+3. If generation fails: call `search` with `in: "templates"` and the query "quote", then `set_template` with the `galleryTemplateId` of a result that has a Word version.
+4. Call `configure_placeholders` with a description for every placeholder and a format for every amount and date. Set the user's `locale` with `configure_automation`.
 5. Call `configure_esignature` with `closeType: "acceptance"`, `deliveryMethod: "email"` and one signer `{ role: "Client", emailSource: "request" }`.
-6. Call `list_placeholders`. Fill every placeholder with realistic sample data for the user's business.
+6. Call `get_automation` for the placeholders. Fill every placeholder with realistic sample data for the user's business. Send numbers as numbers and dates as ISO dates.
 7. Call `create_document` with `mode: "test"` and `recipients: [{ signer: 1, email: <user's email>, name: <user's name> }]`.
 8. Tell the user: "Check your inbox on your phone, open the email from DocsAutomator, type your name and tap Accept."
 
@@ -31,14 +30,14 @@ Test mode sends the real email and does not count toward usage. The document car
 
 ## Done
 
-The first win is done when `get_esign_session` returns `status: "completed"`. Then give the user two links: the accepted PDF (`signedPdfUrl`) and the record at https://app.docsautomator.co/documents.
+The first win is done when `list_esign_sessions` with the `sessionId` returns `status: "completed"`. Then give the user two links: the accepted PDF (`signedPdfUrl`) and the record at https://app.docsautomator.co/documents.
 
 ## Next steps
 
 Offer one of these:
-- "Send it to a real client": call `create_document` again with `mode: "live"`, with the client's email in `recipients`. When the user asks about the price of a real acceptance, call `search_docs` with "signing acceptance price" and quote the result.
-- "Now from my Airtable": connect Airtable in the DocsAutomator app under Settings > Integrations, then call `set_data_source` and `set_field_mappings`.
-- "Use my own Word template": call `upload_word_template` with the user's .docx file.
+- "Send it to a real client": call `create_document` again with `mode: "live"`, with the client's email in `recipients`. When the user asks about the price of a real acceptance, call `search` with "signing acceptance price" and quote the result.
+- "Now from my Airtable": connect Airtable in the DocsAutomator app under Settings > Integrations, then call `get_data_source` for the table and its fields, and `set_data_source` with the table and the field `mappings`.
+- "Use my own Word template": call `set_template` with the user's .docx file as `fileBase64`.
 
 ## Wording
 
