@@ -113,7 +113,7 @@ Every tool tells your app whether it only reads, changes data, or replaces, dele
 
 ## Pricing
 
-Pricing is at https://docsautomator.co/pricing. Acceptance and signature cost $0.50 per document, charged once when the first recipient opens it. A request nobody opens is free.
+Pricing is at https://docsautomator.co/pricing. Signing and acceptance are included in every plan; a signed or accepted document counts as one document.
 
 ## Documentation and support
 
