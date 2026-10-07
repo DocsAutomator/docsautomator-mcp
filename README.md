@@ -19,9 +19,9 @@ The server is hosted by DocsAutomator. You install nothing. This repository hold
 You sign in to DocsAutomator the first time your app connects. You need a DocsAutomator account: https://app.docsautomator.co.
 
 **Claude (web, desktop and mobile)**
-1. Open Settings, then Connectors.
-2. Click "Add custom connector".
-3. Enter `https://mcp.docsautomator.co/mcp` and click Connect.
+1. Open Customize, then Connectors.
+2. Click "+ Add", then "Add custom connector".
+3. Enter the name DocsAutomator and the address `https://mcp.docsautomator.co/mcp`, then click Continue and Add.
 4. Sign in to DocsAutomator and allow access.
 
 **ChatGPT**
