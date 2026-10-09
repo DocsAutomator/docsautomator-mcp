@@ -10,16 +10,16 @@ This is the first win with DocsAutomator. You make a quote in the user's brand a
 ## Before you start
 
 - The DocsAutomator MCP server must be connected (`https://mcp.docsautomator.co/mcp`). If its tools are missing, tell the user to add it: in Claude, Settings > Connectors > Add custom connector; in ChatGPT, Settings > Plugins with developer mode on; in Cursor or VS Code, the "Add to" button on https://docsautomator.co/features/ai-and-agents/.
-- Ask for two things in one message: the user's email address (the quote goes to them) and, optionally, their website (for the brand).
+- Ask for three things in one message: the user's email address (the quote goes to them), whether they already have a quote template (a Word file, a PDF or a Google Doc), and, optionally, their website (for the brand).
 
 ## Steps
 
 1. Call `create_automation` with `title: "Quotes"` and `dataSourceName: "API"`.
-2. Call `generate_word_template` on the new automation:
-   - `title: "Quote"`, `signingMode: "none"` (acceptance needs no signature block).
-   - `brandWebsite` set to the user's website, when they gave one. It reads their brand colors and logo.
-   - A prompt for a one-page quote: logo, quote number, date, valid-until date, sender and client details, a line items table (description, quantity, unit price, amount), subtotal, tax, total, and terms.
-3. If generation fails: call `search` with `in: "templates"` and the query "quote", then `set_template` with the `galleryTemplateId` of a result that has a Word version.
+2. Give it a template, in this order:
+   - Their own template: call `set_template` with it (`fileBase64` for a Word or PDF file, the link for a Google Doc).
+   - Otherwise our gallery: call `search` with `in: "templates"` and the query "quote", show the results that have a Word version, and call `set_template` with the `galleryTemplateId` they pick.
+   - Only when none fits, or the user asks for AI: call `generate_word_template` on the new automation with `title: "Quote"`, `signingMode: "none"` (acceptance needs no signature block), `brandWebsite` set to the user's website when they gave one, and a prompt for a one-page quote: logo, quote number, date, valid-until date, sender and client details, a line items table (description, quantity, unit price, amount), subtotal, tax, total, and terms.
+3. Never lead with an AI design: ask about their own template first, then offer the gallery.
 4. Call `configure_placeholders` with a description for every placeholder and a format for every amount and date. Set the user's `locale` with `configure_automation`.
 5. Call `configure_esignature` with `closeType: "acceptance"`, `deliveryMethod: "email"` and one signer `{ role: "Client", emailSource: "request" }`.
 6. Call `get_automation` for the placeholders. Fill every placeholder with realistic sample data for the user's business. Send numbers as numbers and dates as ISO dates.
@@ -37,7 +37,6 @@ The first win is done when `list_esign_sessions` with the `sessionId` returns `s
 Offer one of these:
 - "Send it to a real client": call `create_document` again with `mode: "live"`, with the client's email in `recipients`. When the user asks about the price of a real acceptance, call `search` with "signing acceptance price" and quote the result.
 - "Now from my Airtable": connect Airtable in the DocsAutomator app under Settings > Integrations, then call `get_data_source` for the table and its fields, and `set_data_source` with the table and the field `mappings`.
-- "Use my own Word template": call `set_template` with the user's .docx file as `fileBase64`.
 
 ## Wording
 
