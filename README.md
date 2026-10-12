@@ -2,9 +2,11 @@
 
 DocsAutomator makes documents from your data and sends them for acceptance or signature. This repository describes how to connect your AI agent to the hosted DocsAutomator MCP server. MCP (Model Context Protocol) is the open standard that AI apps such as Claude, ChatGPT, Cursor and VS Code use to call outside tools.
 
-**Server address:** `https://mcp.docsautomator.co/mcp`
+**Claude:** DocsAutomator is an official connector in the Claude directory: https://claude.ai/directory/connectors/docsautomator
 
-The server is hosted by DocsAutomator. You install nothing. This repository holds no server code, only the connection details, a Claude plugin, a Cursor plugin and a skill.
+**Server address for other AI apps:** `https://mcp.docsautomator.co/mcp`
+
+The server is hosted by DocsAutomator. You install nothing. This repository holds no server code, only the connection details, a Claude plugin with a skill, and a Cursor plugin.
 
 ## What your agent can do
 
@@ -18,11 +20,14 @@ The server is hosted by DocsAutomator. You install nothing. This repository hold
 
 You sign in to DocsAutomator the first time your app connects. You need a DocsAutomator account: https://app.docsautomator.co.
 
-**Claude (web, desktop and mobile)**
-1. Open Settings, then Connectors.
-2. Click "Add custom connector".
-3. Enter `https://mcp.docsautomator.co/mcp` and click Connect.
-4. Sign in to DocsAutomator and allow access.
+**Claude (web, desktop, mobile and Claude Code)**
+1. Open DocsAutomator in the Claude directory: https://claude.ai/directory/connectors/docsautomator
+2. Click "Connect to Claude".
+3. Sign in to DocsAutomator and click Authorize.
+
+In Claude Code, sign in with the same Claude account (`/login`). DocsAutomator then shows in `/mcp` as "claude.ai DocsAutomator", with no extra setup.
+
+Only if you connect Claude Code with an API key instead of a Claude account: `claude mcp add --transport http docsautomator https://mcp.docsautomator.co/mcp --header "Authorization: Bearer YOUR_API_KEY"`.
 
 **ChatGPT**
 1. Turn on developer mode in Settings, under Security and login.
@@ -53,13 +58,9 @@ This repository is also a Cursor plugin: the manifest is `.cursor-plugin/plugin.
 
 [Add to VS Code](vscode:mcp/install?%7B%22name%22%3A%22docsautomator%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.docsautomator.co%2Fmcp%22%7D)
 
-**Claude Code**
+**Claude Code skill**
 
-```bash
-claude mcp add --transport http docsautomator https://mcp.docsautomator.co/mcp
-```
-
-To add the server and the "Send a quote for acceptance" skill in one step, install this repository as a plugin:
+To add the "Send a quote for acceptance" skill, install this repository as a plugin. The plugin holds the skill only; the DocsAutomator tools come from the Claude directory connector above.
 
 ```
 /plugin marketplace add DocsAutomator/docsautomator-mcp
