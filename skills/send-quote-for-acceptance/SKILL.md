@@ -9,7 +9,7 @@ This is the first win with DocsAutomator. You make a quote in the user's brand a
 
 ## Before you start
 
-- The DocsAutomator MCP server must be connected (`https://mcp.docsautomator.co/mcp`). If its tools are missing, tell the user to add it: in Claude, Settings > Connectors > Add custom connector; in ChatGPT, Settings > Plugins with developer mode on; in Cursor or VS Code, the "Add to" button on https://docsautomator.co/features/ai-and-agents/.
+- The DocsAutomator MCP server must be connected (`https://mcp.docsautomator.co/mcp`). If its tools are missing, tell the user to add it: in Claude, open https://claude.ai/directory/connectors/docsautomator and click "Connect to Claude"; in ChatGPT, Settings > Plugins with developer mode on; in Cursor or VS Code, the "Add to" button on https://docsautomator.co/features/ai-and-agents/.
 - Ask for three things in one message: the user's email address (the quote goes to them), whether they already have a quote template (a Word file, a PDF or a Google Doc), and, optionally, their website (for the brand).
 
 ## Steps
