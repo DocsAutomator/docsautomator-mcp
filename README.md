@@ -58,9 +58,9 @@ This repository is also a Cursor plugin: the manifest is `.cursor-plugin/plugin.
 
 [Add to VS Code](vscode:mcp/install?%7B%22name%22%3A%22docsautomator%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.docsautomator.co%2Fmcp%22%7D)
 
-**Claude Code skill**
+**The DocsAutomator skill (Claude Code)**
 
-To add the "Send a quote for acceptance" skill, install this repository as a plugin. The plugin holds the skill only; the DocsAutomator tools come from the Claude directory connector above.
+The skill teaches your agent how to set up your documents, agree each field with you, send for signature or acceptance, and save the signed PDF back to your records. Install this repository as a plugin. The plugin holds the skill only; the DocsAutomator tools come from the Claude directory connector above.
 
 ```
 /plugin marketplace add DocsAutomator/docsautomator-mcp
@@ -100,7 +100,7 @@ Your agent can send any document in test mode. A test document carries a preview
 
 ## Tools
 
-The server gives your agent 18 tools. The main path: your agent is the data source and sends the values for each document. In plain words:
+The server gives your agent 22 tools. Native for Airtable, Google Sheets, Notion and the tools you know: DocsAutomator reads the record, starts on its own and puts the signed PDF back into the record. Your AI agent for everything else, such as HubSpot: your agent reads the record with its own connector, sends the values and writes the result back. In plain words:
 
 - **Automations:** list, read, create, copy and trash automations; set the name, language, status, trigger and output (PDF, Word, Google Doc, Google Drive, email).
 - **Templates:** design a Word template with AI in your brand, edit it and undo an edit, or use a gallery template, your own Word or PDF file, or a Google Doc you already have.

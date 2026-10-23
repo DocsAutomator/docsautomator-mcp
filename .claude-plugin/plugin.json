@@ -1,7 +1,7 @@
 {
   "name": "docsautomator",
-  "description": "Make documents in your brand from your AI agent and send them for acceptance or signature with DocsAutomator.",
-  "version": "1.2.0",
+  "description": "Make documents from your own template and data with DocsAutomator, send them for signature or acceptance, and save the signed PDF back to your records.",
+  "version": "1.3.0",
   "author": { "name": "DocsAutomator", "email": "support@docsautomator.co" },
   "homepage": "https://docsautomator.co/features/ai-and-agents/"
 }
