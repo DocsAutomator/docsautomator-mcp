@@ -24,6 +24,7 @@ The user needs a DocsAutomator account: https://app.docsautomator.co.
 - Ask in plain text when you need a choice. Ask before every call that sends an email or makes a live document.
 - Send raw values: numbers as numbers, dates as ISO dates (2026-10-01). DocsAutomator formats them.
 - Never invent amounts, names, dates or email addresses. Ask for them.
+- Address fields by their name. Ids of fields, records and tables are case-sensitive: use an id exactly as a tool returned it in this run, or read it again from the tool's schema. Never copy or retype an id from a card, a message or an earlier chat, and never write ids into routine instructions.
 - Say "field" to the user, not "placeholder".
 - Say "accept" and "acceptance" for the acceptance flow. Never call an acceptance "legally binding".
 - Quote prices only from `get_profile`. Signing and acceptance are included in every paid plan.
