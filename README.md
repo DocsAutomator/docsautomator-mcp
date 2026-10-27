@@ -15,7 +15,7 @@ DocsAutomator hosts the server, so you install nothing. This repository holds no
 1. **Set up once in a chat.** Claude or ChatGPT creates the automation, adds your template (your own Google Doc, Word or PDF file, a gallery template, or a new Word template in your brand), connects your data source and maps each placeholder to a field.
 2. **Check it.** The first document is a test document from a real record (see Test mode).
 3. **Run on autopilot.** The integration makes each document from your record, with no chat and no AI. The PDF and its link can go back to the record, to Google Drive or OneDrive, or out by email.
-4. **Optional: signing or acceptance.** The recipient signs the document, or reads it and clicks Accept. The signed or accepted PDF and its status go back to the record.
+4. **Optional: signing or acceptance.** The recipient signs the document, or reads it and clicks Accept. The signed or accepted PDF can go back to the record.
 
 DocsAutomator has native integrations for Airtable, Google Sheets, Google Forms, Notion, SmartSuite and ClickUp, and works with Zapier, Make, n8n, Glide, Softr and Noloco.
 
