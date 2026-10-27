@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "co.docsautomator/mcp",
   "title": "DocsAutomator",
-  "description": "Make documents in your brand from your data and send them for acceptance or signature.",
-  "version": "1.0.0",
+  "description": "Document generation from your own templates and data, set up from any MCP client.",
+  "version": "1.0.1",
   "websiteUrl": "https://docsautomator.co/features/ai-and-agents/",
   "repository": {
     "url": "https://github.com/DocsAutomator/docsautomator-mcp",
