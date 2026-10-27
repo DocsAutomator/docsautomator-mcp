@@ -1,8 +1,8 @@
 {
   "name": "docsautomator",
   "displayName": "DocsAutomator",
-  "version": "1.0.0",
-  "description": "Make documents in your brand from your data, and send them for acceptance or signature.",
+  "version": "1.0.1",
+  "description": "Document generation from your own templates and data. Set it up once; DocsAutomator then makes each document from your data.",
   "author": {
     "name": "DocsAutomator",
     "email": "support@docsautomator.co"
@@ -11,8 +11,8 @@
   "repository": "https://github.com/DocsAutomator/docsautomator-mcp",
   "license": "MIT",
   "logo": "assets/logo.png",
-  "keywords": ["docsautomator", "documents", "pdf", "word", "e-signature", "acceptance", "quotes", "invoices", "mcp"],
+  "keywords": ["docsautomator", "document-generation", "documents", "templates", "quotes", "invoices", "pdf", "word", "airtable", "google-sheets", "notion", "mcp"],
   "category": "integrations",
-  "tags": ["docsautomator", "documents", "e-signature", "mcp"],
+  "tags": ["docsautomator", "document-generation", "documents", "mcp"],
   "mcpServers": "./mcp.json"
 }

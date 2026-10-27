@@ -5,13 +5,13 @@
     "email": "support@docsautomator.co"
   },
   "metadata": {
-    "description": "DocsAutomator for AI agents: documents in your brand, sent for acceptance or signature."
+    "description": "Document automations from your own templates and data, set up in Claude."
   },
   "plugins": [
     {
       "name": "docsautomator",
       "source": "./",
-      "description": "Make documents in your brand from your AI agent and send them for acceptance or signature with DocsAutomator."
+      "description": "Works with the DocsAutomator connector, which sets up document automations from your own templates and data. Adds a skill to send a quote for acceptance."
     }
   ]
 }
