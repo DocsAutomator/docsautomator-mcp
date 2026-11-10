@@ -1,0 +1,13 @@
+{
+  "name": "docsautomator",
+  "owner": {
+    "name": "DocsAutomator",
+    "email": "support@docsautomator.co"
+  },
+  "plugins": [
+    {
+      "name": "docsautomator",
+      "source": "./plugins/docsautomator"
+    }
+  ]
+}

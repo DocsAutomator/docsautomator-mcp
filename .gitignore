@@ -1,0 +1,6 @@
+# Keys and local client configs never belong in this repository.
+.env*
+*.pem
+*.key
+.cursor/mcp.json
+.vscode/mcp.json

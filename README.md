@@ -8,7 +8,7 @@ You ask Claude or ChatGPT once to set up a document automation: your template, y
 - **ChatGPT:** DocsAutomator is an official plugin in ChatGPT Plugins: https://chatgpt.com/plugins/plugin_asdk_app_6abc8c22ec94819186aac8114b0e24b3
 - **Other MCP clients:** `https://mcp.docsautomator.co/mcp` (streamable HTTP)
 
-DocsAutomator hosts the server, so you install nothing. This repository holds no server code. It holds the connection details, a Claude plugin with a skill, and a Cursor plugin.
+DocsAutomator hosts the server, so you install nothing. This repository holds no server code. It holds the connection details and, in `plugins/docsautomator`, a Claude plugin with a skill and a Cursor plugin.
 
 ## How it works
 
@@ -41,7 +41,7 @@ You need no server address, no API key and no developer mode. On an Enterprise o
 
 **Cursor**
 
-[![Add DocsAutomator MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=DocsAutomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
+[![Add DocsAutomator MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=docsautomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
 
 Click the button, click Install, then Connect, and sign in to DocsAutomator. Or add this to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for all projects:
 
@@ -76,6 +76,7 @@ To add the "Send a quote for acceptance" skill, install this repository as a plu
 
 - **OAuth (recommended):** your client opens a DocsAutomator sign-in page. If your account has more than one workspace, you pick the workspace there. To change the workspace, disconnect and connect again.
 - **API key:** for clients without OAuth, send your API key as a Bearer token in the `Authorization` header. Find the key in DocsAutomator under Settings, Workspace, API. An API key belongs to one workspace.
+- **Keep the API key out of your code repository.** Put a config with an `Authorization` header in your home directory (for example `~/.cursor/mcp.json`), not in a project file such as `.cursor/mcp.json` that you commit. If your client supports it, read the key from an environment variable.
 
 ## First prompt to try
 
@@ -87,7 +88,7 @@ Use Google Sheets, Notion or another source in place of Airtable. Your AI client
 
 ## Tools
 
-The server has 22 tools. Each tool says whether it reads, changes, deletes or sends, so your client can ask you first.
+The server has 22 tools. Each tool carries the standard MCP tool hints: whether it only reads, whether it can change or remove data, and whether it reaches outside DocsAutomator, for example to send an email. A client that reads these hints can ask you before a change or a send.
 
 | Area | Tools |
 |---|---|
