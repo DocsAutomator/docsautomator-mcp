@@ -75,8 +75,7 @@ To add the "Send a quote for acceptance" skill, install this repository as a plu
 ## Sign-in
 
 - **OAuth (recommended):** your client opens a DocsAutomator sign-in page. If your account has more than one workspace, you pick the workspace there. To change the workspace, disconnect and connect again.
-- **API key:** for clients without OAuth, send your API key as a Bearer token in the `Authorization` header. Find the key in DocsAutomator under Settings, Workspace, API. An API key belongs to one workspace.
-- **Keep the API key out of your code repository.** Put a config with an `Authorization` header in your home directory (for example `~/.cursor/mcp.json`), not in a project file such as `.cursor/mcp.json` that you commit. If your client supports it, read the key from an environment variable.
+- **API key:** for clients without OAuth, send your API key as a Bearer token in the `Authorization` header. Find the key in DocsAutomator under Settings, Workspace, API. An API key belongs to one workspace. Put the key in a config in your home directory (for example `~/.cursor/mcp.json`), not in a project file you commit, such as `.cursor/mcp.json`.
 
 ## First prompt to try
 
