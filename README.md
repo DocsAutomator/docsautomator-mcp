@@ -41,7 +41,7 @@ You need no server address, no API key and no developer mode. On an Enterprise o
 
 **Cursor**
 
-[![Add DocsAutomator MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=docsautomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
+[![Add DocsAutomator MCP server to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=DocsAutomator&config=eyJ1cmwiOiJodHRwczovL21jcC5kb2NzYXV0b21hdG9yLmNvL21jcCJ9)
 
 Click the button, click Install, then Connect, and sign in to DocsAutomator. Or add this to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for all projects:
 
