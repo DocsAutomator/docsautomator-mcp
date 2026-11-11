@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "docsautomator",
-      "source": "./",
+      "source": "./plugins/docsautomator",
       "description": "Works with the DocsAutomator connector, which sets up document automations from your own templates and data. Adds a skill to send a quote for acceptance."
     }
   ]

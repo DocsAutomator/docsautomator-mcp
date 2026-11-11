@@ -1,7 +1,7 @@
 {
   "name": "docsautomator",
   "displayName": "DocsAutomator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Document generation from your own templates and data. Set it up once; DocsAutomator then makes each document from your data.",
   "author": {
     "name": "DocsAutomator",
@@ -14,5 +14,6 @@
   "keywords": ["docsautomator", "document-generation", "documents", "templates", "quotes", "invoices", "pdf", "word", "airtable", "google-sheets", "notion", "mcp"],
   "category": "integrations",
   "tags": ["docsautomator", "document-generation", "documents", "mcp"],
+  "skills": "./skills/",
   "mcpServers": "./mcp.json"
 }

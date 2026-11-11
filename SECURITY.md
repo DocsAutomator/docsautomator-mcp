@@ -13,6 +13,6 @@ We reply within two working days and tell you when the issue is fixed.
 
 ## Scope
 
-This repository holds only connection details, a Claude plugin and a skill. The DocsAutomator MCP server itself runs at https://mcp.docsautomator.co/mcp and is operated by DocsAutomator.
+This repository holds only connection details, a Claude plugin with a skill, and a Cursor plugin. The DocsAutomator MCP server itself runs at https://mcp.docsautomator.co/mcp and is operated by DocsAutomator.
 
 Do not test against other customers' data, and do not run load or denial-of-service tests.
